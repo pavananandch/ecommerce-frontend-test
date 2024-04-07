@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="products">
+    <button type="button" class="btn btn-success" (click)="handleAdd()">+ Add Product</button>
+    <table>
+      <tr>
+        <th>S No</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Action</th>
+      </tr>
+      <tr *ngFor="let product of products;let i = index">
+        <th>{{i+1}}</th>
+        <th>{{product.name}}</th>
+        <th>{{product.q}}</th>
+        <th>{{product.price}}</th>
+        <th>
+          <span class="material-icons" (click)="handleEdit(product)">
+            edit
+          </span>
+          <span class="material-icons" (click)="handleDelete(product)">
+            delete
+          </span>
+        </th>
+      </tr>
+    </table>
+  </div>
+</div>

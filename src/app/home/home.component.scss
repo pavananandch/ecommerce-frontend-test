@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  text-align: center;
+  margin-top: 5%;
+  table {
+    width: 100%;
+    tr:first-child {
+        background-color: lightgreen;
+        color: white;
+        font-weight: 600;
+        padding: 20px;
+    }
+
+    th {
+      padding: 20px;
+    }
+  }
+
+  .products button{
+    margin-bottom: 10px;
+    float: right;
+    margin-right: 40px;
+  }
+
+  .material-icons {
+    cursor: pointer;
+    padding-left: 10px;
+  }
+
+  .material-icons:hover {
+    color: green;
+  }
+}

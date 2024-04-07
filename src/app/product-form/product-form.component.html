@@ -1,0 +1,23 @@
+<form>
+  <h1 class="text-center">{{isEdit ? "Edit" : "Add"}} Product</h1>
+  <div class="mb-3">
+    <label class="form-label" for="ProductName">Product Name</label>
+    <input class="form-control" name="ProductName" id="ProductName" [(ngModel)]="product.name" placeholder="Enter Product Name"
+      label="Product Name" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="ProductPrice">Product Price</label>
+    <input class="form-control" type="number" name="ProductPrice" id="ProductPrice" [(ngModel)]="product.price" placeholder="Enter Product Price"
+      label="Product Price" />
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="ProductQuantity">Product Quantity</label>
+    <input class="form-control" type="number" name="ProductQuantity" id="ProductQuantity" [(ngModel)]="product.q" placeholder="Enter Product Quantity"
+      label="Product Quantity" />
+  </div>
+  <div class="mb-3 d-flex justify-content-around w-100">
+    <button class="btn btn-outline-secondary w-25" (click)="handleBack()" >Back</button>
+    <button class="btn btn-primary w-25" *ngIf="!isEdit" (click)="handleAddProduct()" >Submit</button>
+    <button class="btn btn-primary w-25" *ngIf="isEdit" (click)="handleEditProduct()" >Update</button>
+  </div>
+</form>
